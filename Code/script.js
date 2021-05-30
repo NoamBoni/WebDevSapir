@@ -27,14 +27,12 @@ const prgrs = () => {
     }
 }
 
-
-
 const checkform = () => {
     let form = document.getElementById("contact-me").getElementsByTagName("input");
-    for (let i = 0; i < 4; i++)
+    for (let i = 0; i < form.length; i++)
         if (form[i].value === '')
-            return true;
-    return false;
+            return false;
+    return true;
 }
 
 const charsCount = () => {
@@ -47,6 +45,5 @@ const charsCount = () => {
     else
         button.disabled = true;
 }
-
 
 const scrollUp = () => window.scrollTo({ top: 0, behavior: 'smooth' });
